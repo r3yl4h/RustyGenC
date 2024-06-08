@@ -133,7 +133,7 @@ void main(){
     uint64_t rdx;
     uint64_t rcx;
     uint32_t st_2 = 21;
-    if ((int32_t)st_2 <! (int32_t)5) {
+    if ((int32_t)st_2 > (int32_t)5) {
     goto caca;
     }
 
