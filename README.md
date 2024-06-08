@@ -1,6 +1,47 @@
 # RustyGenC
 this is an assembly code translator to C language written in rust, it reads the assembly code from a specified file and displays the C pseudo code,
 
+
+## architecture specification
+the code is only for x86, and is specifically optimized for x64, although I plan to adapt it for other architectures later
+nevertheless, it can still convert 32-bit assembly code, but it will give something like this: 
+**assembly code : ** 
+```asm
+format db 'rdm print: %d', 0
+
+call main
+
+main:
+  mov eax, 32
+  shl eax, 20
+  xor eax, ebx
+  mov edx, 10
+  mov ecx, 10
+  call random_func
+  ret
+```
+**language C : **
+```c
+#include <stdio.h>
+#include <stdint.h>
+uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
+main();
+
+void main(){
+    uint64_t rax;
+    uint64_t rdx;
+    uint64_t rcx;
+    *(uint32_t*)&rax = 32;
+    *(uint32_t*)&rax <<= 20;
+    *(uint32_t*)&rax ^ (uint32_t)rbx;
+    *(uint32_t*)&rdx = 10;
+    *(uint32_t*)&rcx = 10;
+    random_func(rax, rcx, rdx);
+    return;
+}
+```
+we do "***(uint32_t***)" because the 32bit registers represent the low order 32bits of the 64bit registers, and we are therefore trying to reproduce the fact of modifying the low order 32bits
+
 ## Usage
 ```
 Usage: RustygenC <input file(s)>
@@ -162,7 +203,6 @@ fast_call_func(rcx, rdx);
 ```
 etc for other (I have not yet implemented recognition for arguments on the stack)
 if you can try to use the byte, word, dword, qword directives as much as possible because it's easier for the script to deal with
-
 
 #### THE PROJECT IS UNDER DEVELOPMENT IT IS NORMAL THAT THEY HAVE NOT MANY INSTRUCTIONS SUPPORTED
 
