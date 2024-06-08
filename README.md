@@ -77,7 +77,7 @@ main:
 
 void main(){
     uint32_t st_2 = 21;
-    if ((int32_t)st_2 <! (int32_t)5) {
+    if ((int32_t)st_2 >= (int32_t)5) {
     goto caca;
     }
 }
