@@ -150,7 +150,7 @@ mov rdx, 10
 mov rcx, 20
 call fast_call_func
 ``` 
-** C genered : ** 
+**C genered :** 
 ```c
 #include <stdio.h>
 #include <stdint.h>
