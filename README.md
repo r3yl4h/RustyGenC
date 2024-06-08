@@ -20,7 +20,7 @@ main:
   call random_func
   ret
 ```
-**language C : **
+**language C :**
 ```c
 #include <stdio.h>
 #include <stdint.h>
