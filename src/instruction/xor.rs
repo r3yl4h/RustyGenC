@@ -13,7 +13,7 @@ pub fn handle_xor(op1: &str, op2: &str, sequence: &mut Vec<String>, c_code_final
         *skip2 = true;
         return true;
     } else {
-        sequence.push(" ^ ".to_string());
+        sequence.push(" ^= ".to_string());
         true
     }
 }
