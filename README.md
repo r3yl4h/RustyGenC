@@ -144,13 +144,13 @@ void main(){
 ```
 for function arguments, we support the conventions: Fastcall, Thiscall, Vectorcall, msfastcall, and sysabi
  ### example : 
- * assembly fastcall : *
+ #### assembly fastcall : 
  ```asm
 mov rdx, 10
 mov rcx, 20
 call fast_call_func
 ``` 
-* C genered : *
+#### C genered : 
 ```c
 #include <stdio.h>
 #include <stdint.h>
