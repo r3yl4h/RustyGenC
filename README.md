@@ -157,3 +157,6 @@ rcx = 20;
 fast_call_func(rcx, rdx);
 }
 ```
+etc for other (I have not yet implemented recognition for arguments on the stack)
+
+
