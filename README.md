@@ -109,7 +109,7 @@ uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%'
 
 main:
      = 21;
-    if ((int32_t) <! (int32_t)5) {
+    if ((int32_t) > (int32_t)5) {
     goto caca;
     }
 
