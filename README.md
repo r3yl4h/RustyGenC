@@ -184,7 +184,7 @@ void main(){
     print(rcx, rdx);
 }
 ```
-for function arguments, we support the conventions: Fastcall, Thiscall, Vectorcall, msfastcall, and sysabi
+for function arguments, we support the conventions: Fastcall, Thiscall, Vectorcall, msfastcall
  ### example : 
  **assembly fastcall :** 
  ```asm
