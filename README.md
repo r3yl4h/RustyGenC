@@ -109,7 +109,7 @@ uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%'
 
 main:
      = 21;
-    if ((int32_t) > (int32_t)5) {
+    if ((int32_t) >= (int32_t)5) {
     goto caca;
     }
 
@@ -133,7 +133,7 @@ void main(){
     uint64_t rdx;
     uint64_t rcx;
     uint32_t st_2 = 21;
-    if ((int32_t)st_2 > (int32_t)5) {
+    if ((int32_t)st_2 >= (int32_t)5) {
     goto caca;
     }
 
