@@ -21,7 +21,6 @@ const CONVENTIONS_ARG: [(CallingConvention, &[&str]);7] = [
     (CallingConvention::Thiscall, &["cx"]),
     (CallingConvention::Vectorcall, &["cx", "dx", "r8", "r9", "xmm0", "xmm1", "xmm2", "xmm3", "xmm4", "xmm5"]),
     (CallingConvention::Msfastcall, &["cx", "dx", "r8", "r9", "xmm0", "xmm1", "xmm2", "xmm3"]),
-    (CallingConvention::Syscall, &["rax", "rdi", "rsi", "rdx", "r10", "r8", "r9"]),
 ];
 
 
