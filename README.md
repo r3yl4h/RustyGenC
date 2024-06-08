@@ -164,5 +164,5 @@ etc for other (I have not yet implemented recognition for arguments on the stack
 if you can try to use the byte, word, dword, qword directives as much as possible because it's easier for the script to deal with
 
 
-#### THE CODE IS UNDER DEVELOPMENT IT IS NORMAL THAT THEY HAVE NOT MANY INSTRUCTIONS SUPPORTED
+#### THE PROJECT IS UNDER DEVELOPMENT IT IS NORMAL THAT THEY HAVE NOT MANY INSTRUCTIONS SUPPORTED
 
