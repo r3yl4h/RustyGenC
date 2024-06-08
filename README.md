@@ -2,7 +2,9 @@
 this is an assembly code translator to C language written in rust, it reads the assembly code from a specified file and displays the C pseudo code,
 
 ## Usage
-```Usage: RustygenC <input file(s)>```
+```
+Usage: RustygenC <input file(s)>
+```
 
 ##Example
 ### asm:
