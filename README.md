@@ -71,7 +71,7 @@ main:
   jnl caca
 ``` 
 ### C genered : 
-```
+```c
 #include <stdio.h>
 #include <stdint.h>
 
