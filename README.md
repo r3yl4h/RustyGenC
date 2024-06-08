@@ -40,7 +40,7 @@ void main(){
     return;
 }
 ```
-we do "***(uint32_t***)" because the 32bit registers represent the low order 32bits of the 64bit registers, and we are therefore trying to reproduce the fact of modifying the low order 32bits
+we do "* (uint32_t *)" because the 32bit registers represent the low order 32bits of the 64bit registers, and we are therefore trying to reproduce the fact of modifying the low order 32bits
 
 ## Usage
 ```
