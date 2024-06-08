@@ -8,7 +8,7 @@ nevertheless, it can still convert 32-bit assembly code, but it will give someth
 
 **assembly code :** 
 ```asm
-format db 'rdm print: %d', 0
+formats db 'rdm print: %d', 0
 
 call main
 
@@ -25,7 +25,7 @@ main:
 ```c
 #include <stdio.h>
 #include <stdint.h>
-uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
+uint8_t formats[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
 main();
 
 void main(){
@@ -78,7 +78,7 @@ main:
 ```c
 #include <stdio.h>
 #include <stdint.h>
-uint8_t format[5] = {'%', 'd', '\n', 0};
+uint8_t str_rdm[5] = {'%', 'd', '\n', 0};
 
 uint32_t main(){
     uint64_t rbp;
@@ -95,7 +95,7 @@ uint32_t main(){
     uint32_t st_4 = (uint32_t)rax;
     *(uint32_t*)&rax = st_4;
     *(uint32_t*)&rdx = (uint32_t)rax;
-    rax = &format;
+    rax = &str_rdm;
     rcx = rax;
     printf(rcx, rdx);
     *(uint32_t*)&rax = 0;
@@ -131,7 +131,7 @@ WARNING, if you have a function which does not have an epilogue and which has no
 ### without the call statement 
 **asm**: 
 ```asm
-format db 'rdm print: %d', 0
+formats db 'rdm print: %d', 0
 
 main:
   mov [rsp-4], 21
@@ -139,7 +139,7 @@ main:
   jnl caca
 
   caca: 
-  mov rdx, format
+  mov rdx, formats
   mov rcx, 1
   call print
 ```
@@ -147,7 +147,7 @@ main:
 ```c
 #include <stdio.h>
 #include <stdint.h>
-uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
+uint8_t formats[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
 
 main:
      = 21;
@@ -156,7 +156,7 @@ main:
     }
 
     caca:
-    rdx = &format;
+    rdx = &formats;
     rcx = 1;
     print(rcx, rdx);
 }
@@ -168,7 +168,7 @@ if we add a `call main` in the code we obtain :
 ```C
 #include <stdio.h>
 #include <stdint.h>
-uint8_t format[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
+uint8_t formats[14] = {'r', 'd', 'm', ' ', 'p', 'r', 'i', 'n', 't', ':', ' ', '%', 'd', 0};
 main();
 
 void main(){
@@ -180,7 +180,7 @@ void main(){
     }
 
     caca:
-    rdx = &format;
+    rdx = &formats;
     rcx = 1;
     print(rcx, rdx);
 }
