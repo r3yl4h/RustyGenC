@@ -6,7 +6,7 @@ this is an assembly code translator to C language written in rust, it reads the 
 Usage: RustygenC <input file(s)>
 ```
 
-##Example
+## Example
 ### asm:
 ```asm
 str_rdm db '%d\n', 0
