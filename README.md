@@ -101,7 +101,7 @@ main:
   mov rcx, 1
   call print
 ```
-*C genered : *
+***C genered : ***
 ```c
 #include <stdio.h>
 #include <stdint.h>
@@ -119,8 +119,9 @@ main:
     print(rcx, rdx);
 }
 ```
-here we can see that the variables on the stack are no longer represented in the C code and the supposed function is considered as some label instead of being considered as a function
 
+
+here we can see that the variables on the stack are no longer represented in the C code and the supposed function is considered as some label instead of being considered as a function
 if we add a `call main` in the code we obtain : 
 ```C
 #include <stdio.h>
