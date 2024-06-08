@@ -34,7 +34,7 @@ void main(){
     uint64_t rcx;
     *(uint32_t*)&rax = 32;
     *(uint32_t*)&rax <<= 20;
-    *(uint32_t*)&rax ^ (uint32_t)rbx;
+    *(uint32_t*)&rax ^= (uint32_t)rbx;
     *(uint32_t*)&rdx = 10;
     *(uint32_t*)&rcx = 10;
     random_func(rcx, rdx);
