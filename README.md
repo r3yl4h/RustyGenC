@@ -156,8 +156,8 @@ main:
     }
 
     caca:
-    rdx = &formats;
-    rcx = 1;
+    rcx = &formats;
+    rdx = 1;
     print(rcx, rdx);
 }
 ```
@@ -180,8 +180,8 @@ void main(){
     }
 
     caca:
-    rdx = &formats;
-    rcx = 1;
+    rcx = &formats;
+    rdx = 1;
     print(rcx, rdx);
 }
 ```
